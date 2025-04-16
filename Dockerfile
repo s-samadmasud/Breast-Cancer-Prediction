@@ -2,13 +2,12 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-# Copy the requirements file
+RUN pip install --upgrade pip
+
 COPY requirements.txt .
 
-# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire Flask application
 COPY . .
 
 EXPOSE 5000
