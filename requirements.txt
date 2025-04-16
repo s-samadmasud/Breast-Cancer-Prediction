@@ -3,5 +3,5 @@ pandas
 matplotlib
 seaborn
 flask
-pickle
+#pickle
 
