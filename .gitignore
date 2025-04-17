@@ -2,3 +2,5 @@ cancervenv
 Cancer_Data.csv
 #model.pkl
 cancervenv/
+breast_cancer_prediction.ipynb
+canacer_prediction.ipynb
