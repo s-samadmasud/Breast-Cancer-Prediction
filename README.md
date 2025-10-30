@@ -13,25 +13,80 @@ The project aims to develop a model that can accurately predict breast cancer wi
 * `seaborn`: For advanced data visualization.
 * `Flask` (Optional): To create a web app for interactive model deployment (see "Deployment" section below).
 
+##  Folder Structure
+
++ Breast-Cancer-Prediction
+  + static
+      + style.css
+  + templates
+      + index.html
+  + app.py
+  + dockerfile
+  + requirements.txt
+
+---
 ## Installation
 
-1. **Create a virtual environment:**
+## Local Setup (Without Docker)
 
-   Highly recommended to isolate project dependencies and avoid conflicts. Here's an example using venv (I use Python 3.10):
-      ```bash
-      python -m venv venv
-      source venv/bin/activate  # Linux/macOS
-      venv\Scripts\activate.bat  # Windows
 
-3. **Activate the virtual environment (commands above)**
-4. **Install dependencies:**
+1. **Clone the repository:**
+        
+    ```bash
+        git clone https://github.com/s-samadmasud/Breast-Cancer-Prediction.git
+        cd Breast-Cancer-Prediction
+2. **Create a virtual environment(conda):**
+
+   
       ```bash
-      pip install -r requirements.txt
-Note: If you don't have a requirements.txt file, create one by listing all the dependencies mentioned above, one per line. 
+            conda create -p venv python==3.10 -y
+            conda activate venv/
+3. **Install dependencies:**
+      ```bash
+            pip install -r requirements.txt
+4. **Run the application:**
+    ```bash
+          python app.py
+## Local Setup (with Docker)
+1. **Clone the repository:**
+        
+    ```bash
+        git clone https://github.com/s-samadmasud/Breast-Cancer-Prediction.git
+        cd Breast-Cancer-Prediction
+2. **Build Docker Image:**
+
+   
+      ```bash
+            docker build -t Breast-Cancer-Prediction .
+3. **Run Container:**
+      ```bash
+            docker run -p 5000:5000 Breast-Cancer-Prediction
+4. **Run the application:**
+    ```bash
+          http://localhost:5000/
+## Local Setup (Pull from Docker Hub)
+1. **Pull the Prebuilt Docker Image:**
+
+    ```bash
+        docker pull samad25/breast-cancer-prediction:latest
+2. **Run the Prebuilt Docker Image:**
+    ```bash            
+        docker run -p 5000:5000 samad25/breast-cancer-prediction:latest
+3. **Run the application:**
+    ```bash
+          http://localhost:5000/  
 
 ## Data Acquisition
 1. Download the breast cancer  dataset from Kaggle: (https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset).
 2. Extract the downloaded archive.
 
+## Author
 
+<p align="left">
+  <b>Suhal Samad</b><br>
+  AI & ML Engineer | Real-Time Computer Vision, Edge AI & Deep Learning<br>
+  🔗 <a href="https://metaidigit.com" target="_blank">metaidigit.com</a>
+</p>
+
+---
 
